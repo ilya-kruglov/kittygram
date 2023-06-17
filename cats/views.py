@@ -6,6 +6,9 @@ from .models import Cat
 from .serializers import CatSerializer
 
 
+# View-функция cat_list() будет обрабатывать только запросы GET и POST, 
+# запросы других типов будут отклонены,
+# так что в теле функции их можно не обрабатывать
 @api_view(['GET', 'POST'])
 def cat_list(request):
     if request.method == 'POST':

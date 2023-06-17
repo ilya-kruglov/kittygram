@@ -1,0 +1,35 @@
+# пример GET запроса
+GET http://127.0.0.1:8000/cats/
+###
+
+POST http://127.0.0.1:8000/cats/
+Content-Type: application/json
+
+{
+    "name": "Pushiloch",
+    "color": "black",
+    "birth_year": 1988
+}
+###
+# 400 Bad Request
+POST http://127.0.0.1:8000/cats/
+Content-Type: application/json
+
+{
+    "name": "Bulochka",
+    "color": "red",
+    "birth_year": 2005.07
+}
+###
+# Correct obj 3
+POST http://127.0.0.1:8000/cats/
+Content-Type: application/json
+
+{
+    "name": "Bulochka",
+    "color": "red",
+    "birth_year": 2005
+}
+###
+# Delete objs
+DELETE http://127.0.0.1:8000/cats/
