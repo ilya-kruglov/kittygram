@@ -33,3 +33,25 @@ Content-Type: application/json
 ###
 # Delete objs
 DELETE http://127.0.0.1:8000/cats/
+###
+# many=True!!!
+POST http://127.0.0.1:8000/cats/
+Content-Type: application/json
+
+[
+    {
+        "name": "Стёпа",
+        "color": "белый",
+        "birth_year": 1971
+    },
+    {
+        "name": "Мурка",
+        "color": "рыжий",
+        "birth_year": 2010
+    },
+    {
+        "name": "Пушок",
+        "color": "чёрный",
+        "birth_year": 2018
+    }
+]
