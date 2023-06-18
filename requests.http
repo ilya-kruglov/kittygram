@@ -55,3 +55,42 @@ Content-Type: application/json
         "birth_year": 2018
     }
 ]
+
+
+###
+# Получение всех объектов БД
+GET http://127.0.0.1:8000/cats/
+###
+# View-class without many=True
+POST http://127.0.0.1:8000/cats/
+Content-Type: application/json
+
+{
+    "name": "Loki",
+    "color": "red",
+    "birth_year": 2015
+}
+###
+# GET one object
+GET http://127.0.0.1:8000/cats/4/
+###
+# View-class: update one object
+PUT http://127.0.0.1:8000/cats/4/
+Content-Type: application/json
+
+{
+    "name": "Dart",
+    "color": "black",
+    "birth_year": 666
+}
+###
+# View-class: update one object partly
+PATCH  http://127.0.0.1:8000/cats/4/
+Content-Type: application/json
+
+{
+    "birth_year": 1666
+}
+###
+# Delete one object
+DELETE http://127.0.0.1:8000/cats/4/
